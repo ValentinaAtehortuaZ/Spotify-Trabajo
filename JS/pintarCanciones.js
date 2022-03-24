@@ -34,11 +34,13 @@ export function pintarCanciones(resultado){
     
             let cuadroTexto=document.createElement("div")
             cuadroTexto.classList.add("text-center")
+            
     
             let preview = document.createElement("audio")
             preview.src = cancion.preview_url
             preview.setAttribute("controls","controls")
-    
+            preview.classList.add("w-100")
+           
            
             tarjeta.appendChild(imagen)
             tarjeta.appendChild(separador)
@@ -47,9 +49,7 @@ export function pintarCanciones(resultado){
             cuadroTexto.appendChild(preview)
             
             
-            
-            
-            
+        
             columna.appendChild(tarjeta)
             ContenedorCanciones.appendChild(columna)
     
