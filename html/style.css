@@ -89,4 +89,9 @@ h1 {
     margin-left: 20px;
 }
 
+.imgRedonda {
+    width: 18px;
+    height: 180px;
+    border-radius:150px;
+}
     
