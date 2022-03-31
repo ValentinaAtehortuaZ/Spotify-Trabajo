@@ -5,11 +5,21 @@ export function pintarCanciones(resultado) {
 
     let ContenedorCanciones = document.getElementById("contenedorCanciones")
 
+    let nombreArtista=document.createElement("h1")
+    nombreArtista.textContent=resultado.tracks[0].artists[0].name
+  
+
+    ContenedorCanciones.appendChild(nombreArtista)
+
+    let fila=document.createElement("div")
+    fila.classList.add("row")
+    fila.classList.add("g-4")
     resultado.tracks.forEach(function (cancion) {
 
 
         let columna = document.createElement("div")
         columna.classList.add("col")
+        columna.classList.add("col-6")
        
 
         let tarjeta = document.createElement("div")
@@ -55,8 +65,11 @@ export function pintarCanciones(resultado) {
 
 
         columna.appendChild(tarjeta)
-        ContenedorCanciones.appendChild(columna)
+        fila.appendChild(columna)
+        ContenedorCanciones.appendChild(fila)
       
 
     })
+
+
 }
