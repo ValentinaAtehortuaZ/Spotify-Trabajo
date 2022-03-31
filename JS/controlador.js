@@ -3,6 +3,7 @@ import {generarURI} from "./generarArtistas.js"
 import {generarTOKEN} from "./generadorToken.js"
 import {consumirAPI} from "./servicios.js"
 import { buscarArtista} from "./buscador.js"
+import{pintarIndex} from"./pintarIndex.js"
 
 let cards=document.getElementById("contenedorCanciones")
 
@@ -28,11 +29,13 @@ boton.addEventListener("click",function(event){
         let datosConsultadosAPI= await consumirAPI(URI,token)
       
         pintarCanciones(datosConsultadosAPI)
+       
     }
    artistaSelecciondo=""
     activarAPI()
     cards.innerHTML=""
 
-
+   
 
 })
+pintarIndex()
