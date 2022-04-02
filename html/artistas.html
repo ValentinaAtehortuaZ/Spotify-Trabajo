@@ -19,7 +19,7 @@
 
 
         <a href="./index.html">
-            <img class="img" src="./img/logo.png" width="260" height="110px" alt="logo">
+            <img class="img" src="./img/logo.png" width="255" height="115px" alt="logo">
         </a>
         <ul class="menu">
             <div class="row justify-content-center ">
@@ -28,27 +28,92 @@
 
             <img src="./img/spotify-colour2.gif" class="w-100 imgRedonda  mb-5 mt-5" alt="">
 
-           <!-- <form class="d-flex mt-5" id="buscador">
+            <!-- <form class="d-flex mt-5" id="buscador">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                     id="cajaBusqueda">
 
                 <button class="btn btn-outline-success" type="submit" id="boton">Search</button>
             </form>-->
+
+           
         </ul>
+
+        <div class="seguir"> 
+            <button type="button" class="btn btn-outline-success ms-5 " id="btnCambiar">Seguir</button>
+
+            <script>
+
+                let botonCambiar = document.getElementById("btnCambiar")
+                botonCambiar.addEventListener("click", function (evento) {
+
+                    evento.preventDefault()
+
+                    $(this).text(function (i, text) {
+                        let mensaje = 0
+                        if (text == "Seguir") {
+
+
+                            document.getElementById('btnCambiar').onclick = function () {
+                                alert('Estás siguiendo a este artista');
+                            }
+
+
+                        } else if (text == "Siguiendo") {
+
+                            document.getElementById('btnCambiar').onclick = function () {
+                                alert('Dejaste de seguir a este artista');
+                            }
+
+
+                        }
+                        return text === "Seguir" ? "Siguiendo" : "Seguir";
+
+
+                    })
+
+                })
+            </script>
+
+
+        </div>
+
+       
     </div>
     <div id="contenido" style="margin-left: 300px;">
 
-        <h1>Artistas</h1>
+        <h1>Artistas <img src="./img/chulo.png" class="W-100" height="25px" width="25px" alt=""></h1>
 
         <a id="abrir" class="abrir-cerrar" href="javascript:void(0)" onclick="mostrar()" style="display: none;">Abrir
-            menu</a><a id="cerrar" class="abrir-cerrar" href="#" onclick="ocultar()" style="display: inline;">Cerrar
-            menu</a>
-        <div class="container mt-5">
-            <div class="row  row-cols-md-1 g-4" id="contenedorCanciones">
-                
+            menú</a><a id="cerrar" class="abrir-cerrar" href="#" onclick="ocultar()" style="display: inline;">Cerrar
+            menú</a>
+
+
+        <div class="container mt-3">
+
+
+            <div class="row  row-cols-md-1  mb-5" id="contenedorCanciones">
+
+                <h1 id="texto"></h1>
+                <img id="imagen1" class="W-100">
+
             </div>
         </div>
     </div>
+
+    <footer class="footer text-white" >
+
+    
+
+        <div class=" container copyright  ">
+            <div class="row row-cols- row-cols-md-2 g-4 ms-5 ">
+               <div class="col mb-3">
+                <small>&copy; 2022 <b> Spotify</b> - Todos los derechos reservados </small>
+               </div>
+            </div>
+            </div>
+            
+
+    </footer>
 
 
     <script>
@@ -78,6 +143,7 @@
 
 
     <script src="/Js/controlador.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

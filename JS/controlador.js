@@ -2,7 +2,7 @@ import {pintarCanciones} from "./pintarCanciones.js"
 import {generarURI} from "./generarArtistas.js"
 import {generarTOKEN} from "./generadorToken.js"
 import {consumirAPI} from "./servicios.js"
-//import { buscarArtista} from "./buscador.js"
+import { buscarArtista} from "./buscador.js"
 //import{pintarIndex} from"./pintarIndex.js"
 
 
@@ -11,13 +11,24 @@ import {consumirAPI} from "./servicios.js"
 let artistaSeleccionada=(window.location.search.split("=")[1])
 if(artistaSeleccionada=="NAN"){
 
-  let mensaje=document.createElement("h1")
-  mensaje.classList.add("text-center")
-  mensaje.textContent="ERROR! No se ha encontrado ningún artista"+mensaje
+  function cambiarArtistas(){
+    
+  let etiquetaImagen=document.getElementById("texto")
+ 
+  etiquetaImagen.textContent=("¡ERROR! No se ha encontrado este artista.")
+  etiquetaImagen.classList.add("text-center")
+  etiquetaImagen.classList.add("mt-5")
+  
 
-  ContenedorCanciones.appendChild(mensaje)
 
+  let etiquetaImagen1=document.getElementById("imagen1")
+  etiquetaImagen1.src="../html/img/erro2.png"
+
+
+  }
+  cambiarArtistas()
 }else{
+
   //con el idartista obtengo la uri del servicio
 let URI=generarURI(artistaSeleccionada)
 console.log(URI)
@@ -30,6 +41,7 @@ async function activarAPI(){
   pintarCanciones(datosConsultadosAPI)
  
 }
+
 
 
 activarAPI()

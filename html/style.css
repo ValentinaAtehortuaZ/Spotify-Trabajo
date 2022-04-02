@@ -96,3 +96,45 @@ h1 {
     border-radius:150px;
 }
     
+
+.seguir{
+    padding-left: 56px;
+}
+
+.copyright {
+    padding-left: 9000px; 
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+
+
+@media (min-width: 1024px){
+    .footer{
+        background-color: #0a0a0a;
+        padding-left: 550px;
+    }
+}
+
+@media (min-width: 700px){
+
+    .footer{
+        background-color: #0a0a0a;
+        padding-left: 100px;
+    }
+
+}
+@media (min-width: 600px){
+
+    .footer{
+        background-color: #0a0a0a;
+        padding-right: ;
+    }
+
+}
+
+.footer{
+    background-color: #0a0a0a;
+    padding-left: 550px;
+}
