@@ -65,6 +65,13 @@ h1 {
     font-size:180%;
     font-weight:normal;
 }
+
+#port{
+    color:azure;
+    font-size:140%;
+    font-weight:normal;
+}
+
 #contenido {
     transition: margin-left .4s;
     padding: 1rem;
@@ -129,7 +136,7 @@ h1 {
 
     .footer{
         background-color: #0a0a0a;
-        padding-right: ;
+        
     }
 
 }
